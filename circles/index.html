@@ -29,10 +29,12 @@
 			svg.selectAll("circle")
 			    .data([300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400])
 			  .enter().append("circle")
+			  	.transition()
+			  	.duration(1000)
 			    .attr("cy", 400)
 			    .attr("cx", function(d, i) { return i * 100 + 30; })
 			    .attr("r", function(d) { return Math.sqrt(d); });
-			    
+
 									
         </script>
     </body>

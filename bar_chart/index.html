@@ -19,6 +19,11 @@
     </head>
     <body>
     	<div class="chart"></div>
+    	<svg width="720" height="120">
+		  <circle cx="40" cy="60" r="10"></circle>
+		  <circle cx="80" cy="60" r="10"></circle>
+		  <circle cx="120" cy="60" r="10"></circle>
+		</svg>
         <script type="text/javascript">
             var data = [30, 86, 168, 281, 303, 365];
 
@@ -29,6 +34,10 @@
 			    .append("div")
 			    .style("width", function(d) { return d + "px"; })
 			    .text(function(d) { return '$ ' + d; });
+
+			    var circle = d3.selectAll("circle");
+			    circle.style("fill", "steelblue");
+				circle.attr("r", 5);
         </script>
     </body>
 </html>
